@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+   <meta charset="utf-8">
+   <title>Chapter 9 - Share Your Travels</title>
+
+   <link rel="stylesheet" href="lab6.css" />
+   <script type="text/javascript" src="lab6.js"></script>   
+</head>
+<body>
+<header>
+    <h2>Share Your Travels</h2>
+    <nav><img src="images/menu.png"></nav>
+</header>
+<main>
+    <figure id="featured">
+        <img id="pic" src="images/medium/5855774224.jpg" title="Battle" />
+        <figcaption id="figcaption">Battle</figcaption>
+    </figure>
+    <div id="thumbnails">
+        <img id="thumb_pic_0" src="images/small/5855774224.jpg" title="Battle" />
+        <img id="thumb_pic_1" src="images/small/5856697109.jpg" title="Luneburg" />
+        <img id="thumb_pic_2" src="images/small/6119130918.jpg" title="Bermuda" />
+        <img id="thumb_pic_3" src="images/small/8711645510.jpg" title="Athens" />
+        <img id="thumb_pic_4" src="images/small/9504449928.jpg" title="Florence" />
+    </div>
+</main>
+<script>
+    function $(elementId) {
+        return document.getElementById(elementId);
+    }
+
+    var pic = $("pic"),
+        figcaption = $("figcaption");
+
+    $("thumb_pic_0").onclick = function () {
+        pic.src = "images/medium/5855774224.jpg";
+        figcaption.innerHTML = "Battle"
+    };
+    $("thumb_pic_1").onclick = function () {
+        pic.src = "images/medium/5856697109.jpg";
+        figcaption.innerHTML = "Luneburg"
+    };
+    $("thumb_pic_2").onclick = function () {
+        pic.src = "images/medium/6119130918.jpg";
+        figcaption.innerHTML = "Bermuda"
+    };
+    $("thumb_pic_3").onclick = function () {
+        pic.src = "images/medium/8711645510.jpg";
+        figcaption.innerHTML = "Athens"
+    };
+    $("thumb_pic_4").onclick = function () {
+        pic.src = "images/medium/9504449928.jpg";
+        figcaption.innerHTML = "Florence"
+    };
+
+    figcaption.style.transitionProperty = "Opacity";
+    figcaption.style.transitionDuration = "0.5s";
+    pic.onmouseenter = function () {
+        figcaption.style.opacity = "0.8";
+    };
+    pic.onmouseleave = function () {
+        figcaption.style.opacity = "0"
+    };
+</script>
+</body>
+</html>
